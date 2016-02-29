@@ -1,0 +1,49 @@
+Codebook for tidy data required in Cleaning data course
+====================
+RAW DATASET
+====================
+The original (raw ) data was Human Activity Recognition Using Smartphones Dataset (Version 1.0).
+
+for more information about the original data sets read the readme.txt file associated with the original data
+======================
+TIDY DATASET
+======================
+
+contains one data set that contains a table with 68 columns and 180 rows.
+
+the data in this table corresponds to 30 subjects that performed 6 types of activities. for each subject that performed a specific activity  a set of 66 measurements were saved.
+the 66 measurements are described by the names of the columns 3rd to 68th of the table.
+There are 33 signals from thr original dataset for which only the mean and standard deviation were saved. The signals and their units are as follow:
+*note: '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+ NAME					UNITS
+tBodyAcc-XYZ 			g
+tGravityAcc-XYZ			g
+tBodyAccJerk-XYZ		g/second
+tBodyGyro-XYZ			radians/second
+tBodyGyroJerk-XYZ		radians/second/second
+tBodyAccMag			g
+tGravityAccMag			g
+tBodyAccJerkMag			g/second
+tBodyGyroMag			radians/second
+tBodyGyroJerkMag		radians/second/second
+fBodyAcc-XYZ			Hz
+fBodyAccJerk-XYZ		Hz
+fBodyGyro-XYZ			Hz
+fBodyAccMag			Hz
+fBodyAccJerkMag			Hz
+fBodyGyroMag			Hz
+fBodyGyroJerkMag		Hz
+ 
+
+analysis process:
+
+Step 1: combine the train data set and the test data set in one data set
+stack the data from X_train and X_test in X_data
+do the same for y_train and y_test and get y_data
+repeat for data from subject type files (subject_train and subject_test)
+
+Step 2:  Extract only the measurements on the mean and standard deviation for each measurement
+
+Step 3: calculate the the average of each variable for each activity and each subject.
+
+
